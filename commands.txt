@@ -1,0 +1,5 @@
+// создать бдшку
+CREATE DATABASE components;
+
+// запустить парсинг
+python manage.py parse

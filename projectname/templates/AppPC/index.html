@@ -1,0 +1,27 @@
+{% extends 'AppPC/template.html' %}
+
+{% block title %}Автоматический набор комплектующих{% endblock %}
+
+{% block content %}
+    <div class = "content" background-color=black>
+        <form method="GET" action="{%  url 'setup'  %}">
+          <label>Введите сумму</label>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="amount">
+
+        <fieldset>
+            <legend>Выберите производителя процессора:</legend>
+
+            <div>
+              <input type="radio" id="Intel" name="drone" value="Intel"
+                     checked>
+              <label for="huey">Intel</label>
+            </div>
+            <div>
+              <input type="radio" id="AMD" name="drone" value="AMD">
+              <label for="louie">AMD</label>
+            </div>
+        </fieldset>
+         <p style="text-align: center"><button class="btn btn-warning" type="submit">Начать сборку</button>
+        </form>
+    </div>
+{% endblock %}
